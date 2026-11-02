@@ -549,6 +549,7 @@ section {
 #projects {
   width: 100%;
   max-width: 100%;
+  padding: 0;
   background: var(--surface);
   border-top: 1px solid var(--border);
   overflow: hidden;
@@ -679,6 +680,32 @@ section {
 .projects-endnote { margin-left: auto; align-self: end; color: var(--border); font: 8px "DM Mono", monospace; letter-spacing: 1px; }
 @keyframes projectSpin { to { transform: rotate(360deg); } }
 
+
+/* Mobile menu button and expanded nav state */
+.nav-toggle {
+  display: none;
+  width: 40px;
+  height: 38px;
+  padding: 9px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.nav-toggle span {
+  display: block;
+  width: 17px;
+  height: 1px;
+  background: var(--text);
+  transition: transform .2s ease;
+}
+.nav-toggle[aria-expanded="true"] span:first-child { transform: translateY(3px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3px) rotate(-45deg); }
+
 /* Individual project case studies */
 .case-page { max-width: 100%; padding: 0; }
 .case-container { width: min(1120px, calc(100% - 9vw)); margin: 0 auto; padding: 7rem 0 6rem; }
@@ -715,6 +742,23 @@ section {
   .case-block { gap: 25px; }
 }
 @media (max-width: 768px) {
+  .nav-toggle { display: inline-flex; }
+  nav { flex-wrap: wrap; }
+  .nav-links.is-open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1.2rem 1.5rem 1.5rem;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(10, 10, 8, .98);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-links.is-open li { width: 100%; }
+  .nav-links.is-open a { display: block; padding: .85rem 0; font-size: .7rem; border-bottom: 1px solid var(--border); }
+  .nav-links.is-open .nav-cta { text-align: center; margin-top: .8rem; padding: .8rem 1.2rem; border-bottom: 0; }
   #projects .inner { padding: 4rem 1.5rem; }
   .projects-intro { align-items: flex-start; }
   .projects-intro p { font-size: 1rem; }
