@@ -62,6 +62,7 @@
   <!-- NAV -->
   <nav role="navigation" aria-label="Main navigation">
     <a href="#hero" class="nav-logo">Y<span>.</span>S</a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -295,13 +296,82 @@
         <h2 class="section-title" id="projects-title">Projects</h2>
         <div class="section-line"></div>
       </div>
-      <div class="projects-placeholder reveal" aria-label="Projects coming soon">
-        <div class="placeholder-icon" aria-hidden="true">⬡</div>
-        <div class="coming-soon-badge">Coming Soon</div>
-        <div class="placeholder-title">Projects Being Curated</div>
-        <p class="placeholder-sub">
-          A showcase of selected work, case studies, and open-source contributions will appear here soon.
-        </p>
+
+      <div class="projects-intro reveal">
+        <p>Selected work, ideas and digital experiences.<br><span>A closer look at what I build and how I think.</span></p>
+        <span class="projects-count"><strong>04</strong> SELECTED PROJECTS</span>
+      </div>
+
+      <div class="project-filters reveal" role="group" aria-label="Filter projects">
+        <span class="filter-label">FILTER /</span>
+        <button class="project-filter is-active" type="button" data-project-filter="all" aria-pressed="true">All work <span>04</span></button>
+        <button class="project-filter" type="button" data-project-filter="ecommerce" aria-pressed="false">Ecommerce</button>
+        <button class="project-filter" type="button" data-project-filter="web" aria-pressed="false">Web platforms</button>
+        <button class="project-filter" type="button" data-project-filter="brand" aria-pressed="false">Brand &amp; creative</button>
+      </div>
+
+      <div class="project-grid">
+        <a class="project-tile reveal" href="projects/covetory.html" data-project-card data-category="ecommerce" aria-label="Explore the Covetory case study">
+          <div class="project-art art-covetory" aria-hidden="true">
+            <div class="art-topline"><span>COVETORY / 001</span><span>ECOMMERCE</span></div>
+            <div class="art-copy covetory-copy"><span>MODERN ESSENTIALS</span><strong>Quiet<br><i>confidence.</i></strong><small>FEWER THINGS. BETTER CHOSEN.</small></div>
+            <div class="fashion-shape fashion-one"></div><div class="fashion-shape fashion-two"></div>
+            <span class="art-index">01</span>
+          </div>
+          <div class="project-meta"><span>01 / ECOMMERCE EXPERIENCE</span><span>2026</span></div>
+          <div class="project-title-row"><h3>Covetory</h3><span class="project-arrow">↗</span></div>
+          <p class="project-description">A quiet-luxury fashion storefront focused on modern essentials and considered shopping.</p>
+          <div class="project-tags"><span>Next.js</span><span>JavaScript</span><span>MongoDB</span></div>
+          <span class="project-cta">EXPLORE CASE STUDY <b>↗</b></span>
+        </a>
+
+        <a class="project-tile reveal" href="projects/agriha.html" data-project-card data-category="web" aria-label="Explore the Agriha case study">
+          <div class="project-art art-agriha" aria-hidden="true">
+            <div class="art-topline"><span>AGRIHA / 002</span><span>HOME PLANNING</span></div>
+            <div class="art-copy agriha-copy"><span>YOUR HOME, YOUR WAY</span><strong>Plan the<br><i>possibilities.</i></strong><small>FROM FIRST IDEA TO HOME PLAN</small></div>
+            <div class="house-art"><div class="house-roof"></div><div class="house-body"><i></i><b></b><em></em></div></div>
+            <span class="art-index">02</span>
+          </div>
+          <div class="project-meta"><span>02 / PROFESSIONAL PROJECT</span><span>2021–2024</span></div>
+          <div class="project-title-row"><h3>Agriha</h3><span class="project-arrow">↗</span></div>
+          <p class="project-description">A dream-home platform experience connecting budget estimation with architect discovery.</p>
+          <div class="project-tags"><span>React</span><span>Next.js</span><span>JavaScript</span></div>
+          <span class="project-cta">EXPLORE CASE STUDY <b>↗</b></span>
+        </a>
+
+        <a class="project-tile reveal" href="projects/lines-n-grains.html" data-project-card data-category="brand" aria-label="Explore the Lines n Grains case study">
+          <div class="project-art art-lines" aria-hidden="true">
+            <div class="art-topline"><span>LINES N GRAINS / 003</span><span>DIGITAL STUDIO</span></div>
+            <div class="art-copy lines-copy"><span>THOUGHTFUL DIGITAL WORK</span><strong>Ideas into<br><i>experiences.</i></strong><small>WEB / CREATIVE / ADVERTISING</small></div>
+            <div class="line-orbit orbit-one"></div><div class="line-orbit orbit-two"></div>
+            <span class="art-index">03</span>
+          </div>
+          <div class="project-meta"><span>03 / AGENCY WEBSITE</span><span>2026</span></div>
+          <div class="project-title-row"><h3>Lines n Grains</h3><span class="project-arrow">↗</span></div>
+          <p class="project-description">A digital presence for a creative studio bringing web development and advertising together.</p>
+          <div class="project-tags"><span>Next.js</span><span>Tailwind CSS</span><span>Vercel</span></div>
+          <span class="project-cta">EXPLORE CASE STUDY <b>↗</b></span>
+        </a>
+
+        <a class="project-tile reveal" href="projects/haem.html" data-project-card data-category="brand" aria-label="Explore the HÆM case study">
+          <div class="project-art art-haem" aria-hidden="true">
+            <div class="art-topline"><span>HÆM / 004</span><span>OBJECTS TO CARRY</span></div>
+            <div class="art-copy haem-copy"><strong>HÆM</strong><span>MADE TO KEEP.</span></div>
+            <div class="bag-shape bag-large"><i></i></div><div class="bag-shape bag-small"><i></i></div>
+            <span class="art-index">04</span>
+          </div>
+          <div class="project-meta"><span>04 / BRAND &amp; PRODUCT CONCEPT</span><span>2026</span></div>
+          <div class="project-title-row"><h3>HÆM</h3><span class="project-arrow">↗</span></div>
+          <p class="project-description">A tactile, understated brand direction for a premium fabric bag collection.</p>
+          <div class="project-tags"><span>Brand direction</span><span>UI/UX</span><span>Ecommerce</span></div>
+          <span class="project-cta">EXPLORE CASE STUDY <b>↗</b></span>
+        </a>
+      </div>
+
+      <div class="projects-bottom reveal">
+        <span class="projects-star" aria-hidden="true">✳</span>
+        <p>Have an idea that needs a digital home?<br><a href="mailto:info.mhdyasn@gmail.com">Let's make it happen <span>↗</span></a></p>
+        <span class="projects-endnote">END OF SELECTED WORK / 2026</span>
       </div>
     </div>
   </section>
